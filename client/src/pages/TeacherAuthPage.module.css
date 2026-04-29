@@ -1,0 +1,57 @@
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  height: 70vh;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+/* טאבים */
+.tabs {
+  display: flex;
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+/* טאבים בסיס */
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 12px;
+  font-weight: 600;
+  color: #6b7280;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.tab:hover {
+  background: #e5e7eb;
+}
+
+/* פעיל - הרבה יותר ברור */
+.active {
+  background: #14b8a6;
+  color: white;
+  box-shadow: 0 6px 12px rgba(20, 184, 166, 0.25);
+  transform: translateY(-1px);
+}
+
+/* תוכן */
+.content {
+  margin-top: 8px;
+}

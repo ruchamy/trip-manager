@@ -1,0 +1,29 @@
+.header {
+  width: 100%;
+
+  background-image: url(/HeaderBG.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.large {
+  height: 350px;
+}
+
+.small {
+  height: 100px;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .header {
+    height: 120px;
+  }
+}

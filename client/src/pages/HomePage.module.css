@@ -1,0 +1,95 @@
+.header {
+  height: 350px;
+}
+
+.homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafb;
+  padding: 24px;
+}
+
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #6b7280;
+}
+
+/* כפתורים */
+.buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+
+/* בסיס לכפתור */
+.btn {
+  width: 220px;
+  padding: 16px 20px;
+
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* תלמידים */
+.students {
+  background-color: #14b8a6;
+  color: white;
+}
+
+.students:hover {
+  background-color: #0d9488;
+  transform: translateY(-3px);
+}
+
+.students:active {
+  transform: scale(0.96);
+}
+
+/* מורות */
+.teachers {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.teachers:hover {
+  background-color: #d1d5db;
+  transform: translateY(-3px);
+}
+
+.teachers:active {
+  transform: scale(0.96);
+}
+
+/* מובייל */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,155 @@
+.notFoundContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc, #eef2f7, #f1f5f9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.content {
+  text-align: center;
+  color: #111827;
+  z-index: 2;
+}
+
+.errorCode {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.digit {
+  font-size: 100px;
+  font-weight: bold;
+  color: #14b8a6;
+}
+
+.spinning {
+  animation: spin 5s linear infinite;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.backButton {
+  border: none;
+  background: #14b8a6;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.backButton:hover {
+  background: #0d9488;
+  transform: translateY(-2px);
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+}
+
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #cbd5e1;
+  border-radius: 50%;
+  animation: blink 2s infinite ease-in-out;
+}
+
+.star:nth-child(1) { top: 10%; left: 15%; }
+.star:nth-child(2) { top: 25%; left: 70%; }
+.star:nth-child(3) { top: 40%; left: 35%; }
+.star:nth-child(4) { top: 60%; left: 80%; }
+.star:nth-child(5) { top: 75%; left: 20%; }
+.star:nth-child(6) { top: 15%; left: 50%; }
+.star:nth-child(7) { top: 55%; left: 10%; }
+.star:nth-child(8) { top: 85%; left: 65%; }
+
+.floatingObjects {
+  position: absolute;
+  inset: 0;
+}
+
+.object {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+  animation: float 6s ease-in-out infinite;
+}
+
+.obj1 {
+  width: 120px;
+  height: 120px;
+  background: #14b8a6;
+  top: 10%;
+  left: 5%;
+}
+
+.obj2 {
+  width: 80px;
+  height: 80px;
+  background: #3b82f6;
+  bottom: 15%;
+  right: 8%;
+}
+
+.obj3 {
+  width: 60px;
+  height: 60px;
+  background: #f59e0b;
+  top: 25%;
+  right: 18%;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  0%,100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .digit {
+    font-size: 70px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .backButton {
+    width: 100%;
+  }
+}

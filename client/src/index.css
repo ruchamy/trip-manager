@@ -1,0 +1,72 @@
+/*  Reset בסיסי  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+/*  בסיס למסמך  */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*  תמונות  */
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+/*  טפסים  */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*  כפתורים  */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/*  קישורים  */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*  רשימות  */
+ul, ol {
+  list-style: none;
+}
+
+/*  משתנים גלובליים  */
+:root {
+  --color-primary: #14b8a6; /* טורקיז */
+  --color-primary-hover: #0d9488;
+
+  --color-gray: #6b7280;
+  --color-light: #f3f4f6;
+  --color-white: #ffffff;
+
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  --transition: all 0.2s ease;
+}
