@@ -16,7 +16,7 @@ export default function ListView({
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
-        {type === "teacher" ? "רשימת המורים" :  (className ? " תלמידים בכיתה " +className : "רשימת התלמידים")}
+        {type === "teacher" ? "רשימת המורים" :  (!!className ? " תלמידים בכיתה " +className : "רשימת התלמידים")}
       </h1>
 
       <div className={styles.list}>

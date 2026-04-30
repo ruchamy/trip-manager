@@ -8,19 +8,19 @@ type DataProps = {
   items: Teacher[] | Student[];
 }
 
-export default function StudentsList({mode: mode}:{mode: "my" | "all"}) {
+export default function StudentsList({ mode: mode }: { mode: "my" | "all" }) {
   const myStudents = useStudentsByCurrentTeacher();
   const allStudents = useStudents();
 
   const studentsData = mode === "my"
     ? myStudents.data
     : mode === "all"
-    ? allStudents.data
-    : [];
+      ? allStudents.data
+      : [];
 
   const list: DataProps = {
     type: "student",
-    className: studentsData?.[0]?.class?.name || "",
+    className: mode === "my" ? studentsData?.[0]?.class?.name || "" : "",
     items: studentsData ?? [],
   };
 

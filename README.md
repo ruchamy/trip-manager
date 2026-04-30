@@ -8,3 +8,5 @@
    npm run migration:run
 5. להפעיל שרת:
    npm start
+
+   

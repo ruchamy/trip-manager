@@ -7,8 +7,7 @@ export default function Header() {
 
   return (
 
-    <header className={`${styles.header} ${isHome ? styles.large : styles.small
-      }`}>
+    <header className={`${styles.header} ${isHome ? styles.large : styles.small}`}>
     </header>
   );
 }

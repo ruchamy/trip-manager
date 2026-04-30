@@ -25,8 +25,6 @@ export const createTeacher = async (teacher: CreateTeacherDTO): Promise<{ teache
 };
 
 export const loginTeacher = async (data: LoginTeacherDTO): Promise<{ teacher: GetTeacherDTO, token: string }> => {
-    console.log("Login data is service:");
-    console.log(data);
 
     if (data.password !== process.env.TEACHER_PASSWORD) {
         throw new Error("Invalid credentials");

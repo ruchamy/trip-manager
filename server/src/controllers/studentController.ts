@@ -35,18 +35,14 @@ export const getStudentsByClassName = async (req: Request, res: Response) => {
 };
 export const getStudentsByCurrentTeacher = async (req: Request, res: Response) => {
     try {
-        console.log((req as any).user);
-
         const teacherId = (req as any).user.id;
-        console.log(teacherId);
-
         const teacher = await fetchTeacherById(teacherId);
-        console.log(teacher);
-
         const className = teacher!.class.name
         const students = await fetchStudentsByClassName(className);
-        console.log(students);
-
+        if(!students) {
+            res.status(404).json({ error: "No students found" });
+            return;
+        }
         res.status(200).json(students);
     } catch (error) {
         res.status(400).json({ error: error });

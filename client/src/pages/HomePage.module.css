@@ -48,7 +48,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* תלמידים */
 .students {
   background-color: #14b8a6;
   color: white;
@@ -63,7 +62,6 @@
   transform: scale(0.96);
 }
 
-/* מורות */
 .teachers {
   background-color: #e5e7eb;
   color: #111827;
@@ -76,6 +74,62 @@
 
 .teachers:active {
   transform: scale(0.96);
+}
+
+.marker {
+  margin-top: 10vh;
+  display: flex;
+  align-items: flex-end;
+  gap: 70px;
+  padding: 90px;
+}
+
+.icon {
+  width: 80px;
+  height: 1px;
+  padding: 5px;
+  border-radius: 50%;
+  background: #dadada;
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  color: #14b8a6;
+  font-size: 40px;
+  box-shadow: 0 10px 25px rgba(32, 207, 207, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: pulse 2s infinite;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(32, 207, 207, 0.6);
+}
+
+.icon:active {
+  transform: scale(0.95);
+}
+
+.text {
+  color: #454545;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* אנימציית פעימה */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(32, 207, 207, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 20px rgba(32, 207, 207, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(32, 207, 207, 0);
+  }
 }
 
 /* מובייל */

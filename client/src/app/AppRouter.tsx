@@ -7,8 +7,7 @@ import TeacherRegister from "../faetures/teacher/Register/components/teacherRegi
 import StudentRegisterPage from "../pages/StudentRegisterPage";
 import ListPage from "../pages/ListPage";
 import NotFoundPage from "../pages/NotFoundPage";
-
-
+import LocationSystemPage from "../pages/LocationSystemPage";
 import ProtectedRoute from "./ProtectedRoute";
 import StudentRegister from "../faetures/student/components/studentRegister";
 import SuccessPage from "../pages/SuccessPage";
@@ -67,6 +66,10 @@ export const router = createBrowserRouter([
                         element: <TeachersList />,
                     }]
 
+            },
+            {
+                path: "location-system",
+                element: <LocationSystemPage />
             },
             {
                 path: "success",

@@ -25,8 +25,6 @@ export default function Login() {
         e.preventDefault();        
         login.mutate(form, {
             onSuccess: (data: any) => {
-                console.log("Login successful");
-                console.log(data.teacher);
                 
                 navigate("/list/my-students");
             },
@@ -46,7 +44,7 @@ export default function Login() {
                 onChange={handleChange}
             />
             <label className={styles.label}>
-                הסיסמה הסודית שהמורים קיבלו מראש, יש להכניס אותה כדי להתחבר כמורה
+                כדי להתחבר כמורה, יש להכניס את הסיסמא הסודית שקיבלתם מראש
             </label>
             <input
                 name="password"

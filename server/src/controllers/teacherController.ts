@@ -8,8 +8,6 @@ export const addTeacher = async (req: Request, res: Response) => {
         const teacher = await createTeacher({ ...req.body, class: existingClass });
         res.status(201).json(teacher);
     } catch (error) {
-        console.log(error);
-
         res.status(400).json({ error: error });
     }
 };
@@ -19,7 +17,6 @@ export const login = async (req: Request, res: Response) => {
         const { teacher, token } = await loginTeacher(req.body);
         res.status(200).json({ teacher, token });
     } catch (error) {
-        console.log(error);
         res.status(400).json({ error: error });
     }
 };
@@ -39,9 +36,7 @@ export const getTeacherById = async (req: Request, res: Response) => {
 
 export const getTeachers = async (req: Request, res: Response) => {
     try {
-        const teachers = await fetchAllTeachers();
-        console.log(teachers);
-        
+        const teachers = await fetchAllTeachers();        
         res.status(200).json(teachers);
     } catch (error) {
         res.status(400).json({ error: error });

@@ -87,7 +87,6 @@ export default function TeacherRegister() {
 
     if (Object.values(newErrors).some((e) => e)) return;
 
-    console.log(form);
     createTeacher.mutate(form, {
       onSuccess: () => {
         navigate("/success");

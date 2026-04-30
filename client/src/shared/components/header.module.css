@@ -1,15 +1,18 @@
 .header {
   width: 100%;
-
   background-image: url(/HeaderBG.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 70px;
 }
 
 .large {
-  height: 350px;
+  height: 300px;
 }
 
 .small {
@@ -21,7 +24,11 @@
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
 }
+
+
+
 @media (max-width: 768px) {
   .header {
     height: 120px;
